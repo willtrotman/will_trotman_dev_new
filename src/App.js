@@ -4,7 +4,7 @@ import { Nav } from "./components/navigation/Nav";
 import { Header } from "./components/header/Header";
 import { Main } from "./components/main/Main";
 import { About } from "./components/about/About";
-import { Contact } from "./components/Contact/Contact";
+import { Contact } from "./components/contact/Contact";
 import { AudioPlayer } from "./components/audioplayer/AudioPlayer";
 import { useState } from "react";
 
