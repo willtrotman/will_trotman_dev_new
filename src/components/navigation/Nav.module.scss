@@ -1,0 +1,65 @@
+@import "../../../styles/index.scss";
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.2);
+  height: 3rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition-timing-function: ease-in;
+  transition: 0.5s;
+  z-index: 1500;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.navlist {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.navlist li {
+  text-align: center;
+  margin: 0 1rem;
+  cursor: pointer;
+  width: 8rem;
+  font-size: 1.2rem;
+  a {
+    text-decoration: none;
+    color: inherit;
+    text-transform: uppercase;
+    font-family: "Source Code Pro";
+    font-size: inherit;
+  }
+  @media screen and (max-width: 600px) {
+    margin: 0 0.5rem;
+    font-size: 1rem;
+  }
+}
+
+.navlist li:hover {
+  color: $green;
+  ::before {
+    content: "[";
+  }
+  ::after {
+    content: "]";
+  }
+}
+
+#switchItem:hover {
+  ::before {
+    content: "";
+  }
+  ::after {
+    content: "";
+  }
+}

@@ -1,0 +1,112 @@
+@import "../../styles/index.scss";
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.contactRetro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  h2 {
+    margin-bottom: 5rem;
+  }
+}
+
+.contactForm {
+  margin-bottom: 2rem;
+  padding: 3rem;
+  background: rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 50rem;
+  label {
+    color: $mint;
+    font-family: "Roboto";
+    font-size: 1.5rem;
+  }
+  input {
+    height: 2rem;
+  }
+  textarea {
+    height: 15rem;
+  }
+  @media screen and (max-width: 600px) {
+    width: 90%;
+  }
+}
+
+.contactFormRetro {
+  margin-bottom: 2rem;
+  border: 3px solid white;
+  border-radius: 10px;
+  box-shadow: $blue-glow;
+  padding: 3rem;
+  background: rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 50rem;
+  label {
+    color: $mint;
+    font-family: "Roboto";
+    font-size: 1.5rem;
+  }
+  input {
+    height: 2rem;
+  }
+  textarea {
+    height: 15rem;
+  }
+  @media screen and (max-width: 600px) {
+    width: 90%;
+  }
+}
+
+.contactForm > *,
+.contactFormRetro > * {
+  font-size: 1rem;
+  padding: 0.5rem;
+}
+
+.contactForm > *:focus {
+  outline: 2px solid $green;
+}
+
+.mailTo {
+  display: none;
+}
+
+#submit {
+  background-color: $green;
+  border: none;
+  color: $mint;
+  border-radius: 5px;
+  width: 7rem;
+  height: 3rem;
+  margin: 1rem auto 0 auto;
+  cursor: pointer;
+  font-size: 1.3rem;
+}
+
+#submitRetro {
+  background-color: $green;
+  border: none;
+  color: $mint;
+  border-radius: 5px;
+  width: 7rem;
+  height: 3rem;
+  margin: 1rem auto 0 auto;
+  cursor: pointer;
+  font-size: 1.3rem;
+  box-shadow: $blue-glow;
+}
+#submitRetro:hover {
+  background-color: #356bff;
+  box-shadow: $green-glow;
+}

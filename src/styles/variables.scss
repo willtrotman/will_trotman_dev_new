@@ -1,0 +1,21 @@
+// *******************
+// COLOR VARIABLES
+// *******************
+
+$black: rgb(26, 26, 26);
+$mint: #f3f8f2;
+$green: #7ad2bc;
+$darkblue: #092133;
+
+// *******************
+// RETRO THEME GLOWS
+// *******************
+
+$purple-glow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #ae00ff,
+  0 0 82px #ae00ff, 0 0 92px #ae00ff, 0 0 102px #ae00ff, 0 0 151px #ae00ff;
+
+$blue-glow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0044ff,
+  0 0 82px #0044ff, 0 0 92px #0044ff, 0 0 102px #0044ff, 0 0 151px #0044ff;
+
+$green-glow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px $green,
+  0 0 82px $green, 0 0 92px $green, 0 0 102px $green, 0 0 151px $green;

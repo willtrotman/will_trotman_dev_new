@@ -1,0 +1,53 @@
+@import "./styles/index.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  // transition: 1s;
+}
+
+body {
+  background: radial-gradient(rgb(16, 46, 56), $darkblue);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.retroBackground {
+  background-image: url(./assets/background-images/05.jpg);
+  background-size: contain;
+  background-position-x: center;
+}
+
+.App {
+  width: 100%;
+  margin: 0 auto;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: fit-content;
+  margin-bottom: 5rem;
+}
+
+a:hover {
+  color: $green;
+  cursor: pointer;
+}
+
+// Section IDs
+#about {
+  position: relative;
+  z-index: 100;
+}
+
+#work {
+  @media screen and (max-width: 600px) {
+    width: 100%;
+  }
+}

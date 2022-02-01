@@ -1,0 +1,11 @@
+@import "../../styles/index.scss";
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 7rem auto 2rem auto;
+  border-radius: 0 0 10px 10px;
+}

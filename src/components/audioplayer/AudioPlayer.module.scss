@@ -1,0 +1,195 @@
+@import "../../styles/index.scss";
+
+// Variables
+
+$bar-bg: lightgray;
+$seek-before-width: 0;
+$seek-before-color: rgb(236, 236, 236);
+$playhead: white;
+$selected-playhead: #ae00ff;
+
+.audioPlayer {
+  border: 1px solid white;
+  border-radius: 15px;
+  margin: 0 auto;
+  padding: 3rem;
+  width: fit-content;
+  height: 25rem;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+  box-shadow: $purple-glow;
+}
+
+.audioPlayer > * {
+  margin: 0.5rem 0;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.forwardBackward {
+  background: none;
+  border: none;
+  display: flex;
+  color: lightgray;
+  align-items: center;
+  font-family: monospace;
+  font-size: 1rem;
+}
+
+.forwardBackward:hover {
+  color: white;
+}
+
+.playPause {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 1rem;
+  padding: 1rem;
+  margin: 0 1rem;
+  .play {
+    position: relative;
+    left: 5%;
+  }
+}
+
+.shuffleButton {
+  text-transform: uppercase;
+  background: white;
+  border: none;
+  border-radius: 10px;
+  padding: 0.7rem;
+  font-family: "avaneonz";
+  font-size: 1.2rem;
+  color: black;
+  box-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 42px #ae00ff, 0 0 82px #ae00ff,
+    0 0 92px #ae00ff;
+}
+
+.shuffleButton:active {
+  background-color: #ae00ff;
+  box-shadow: none;
+}
+
+.progress {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.currentTime,
+.duration {
+  font-family: monospace;
+  font-size: 1rem;
+  color: lightgray;
+}
+
+.progressBar {
+  appearance: none;
+  border-radius: 10px;
+  background: $bar-bg;
+  position: relative;
+  width: 100%;
+  height: 5px;
+  outline: none;
+  display: flex;
+  align-items: center;
+}
+
+// Progress bar - safari
+.progressBar::-webkit-slider-runnable-track {
+  border-radius: 10px;
+  background: $bar-bg;
+  position: relative;
+  width: 100%;
+  height: 5px;
+  outline: none;
+}
+
+// Progress bar - firefox
+.progressBar::-moz-range-track {
+  border-radius: 10px;
+  background: $bar-bg;
+  position: relative;
+  width: 100%;
+  height: 5px;
+  outline: none;
+}
+
+.progressBar::-moz-focus-outer {
+  border: 0;
+}
+
+// Progress bar - chrome and safari
+
+.progressBar::before {
+  content: "";
+  height: 5px;
+  width: $seek-before-width;
+  background-color: $seek-before-color;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+// Progress bar - firefox
+
+.progressBar::-moz-range-progress {
+  background-color: $seek-before-color;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  height: 5px;
+}
+
+// Playhead chrome and safari
+.progressBar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  border: none;
+  background-color: $playhead;
+  position: relative;
+  margin: -4px 0 0 0;
+  z-index: 3;
+}
+
+// Playhead drag chrome and safari
+.progressBar:active::-webkit-slider-thumb {
+  transform: scale(1.2);
+  background-color: $selected-playhead;
+  // box-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #ae00ff,
+  //   0 0 82px #ae00ff, 0 0 92px #ae00ff, 0 0 102px #ae00ff, 0 0 151px #ae00ff;
+}
+
+// Playhead firefox
+
+.progressBar::-moz-range-thumb {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  border: transparent;
+  background-color: $playhead;
+  position: relative;
+  z-index: 3;
+}
+
+.progressBar:active::-moz-range-thumb {
+  transform: scale(1.2);
+  background-color: $selected-playhead;
+  box-shadow: $purple-glow;
+}

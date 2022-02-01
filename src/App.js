@@ -1,23 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.scss";
+import { Background } from "./components/background/Background";
+import { Nav } from "./components/navigation/Nav";
+import { Header } from "./components/header/Header";
+import { Main } from "./components/main/Main";
+import { About } from "./components/about/About";
+import { Contact } from "./components/Contact/Contact";
+import { AudioPlayer } from "./components/audioplayer/AudioPlayer";
+import { useState } from "react";
 
 function App() {
+  const [isToggled, setIsToggled] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={`App ${isToggled && "retroBackground"}`}>
+      <Background isToggled={isToggled} />
+      <Nav
+        isToggled={isToggled}
+        setIsToggled={setIsToggled}
+        isPlaying={isPlaying}
+        setIsPlaying={setIsPlaying}
+      />
+      <section id="about">
+        <Header isToggled={isToggled} />
+        <About isToggled={isToggled} />
+      </section>
+      {isToggled && (
+        <AudioPlayer isPlaying={isPlaying} setIsPlaying={setIsPlaying} />
+      )}
+      <Main isToggled={isToggled} />
+      <Contact isToggled={isToggled} />
     </div>
   );
 }
