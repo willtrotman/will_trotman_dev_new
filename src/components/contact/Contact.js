@@ -1,5 +1,5 @@
 import classes from "./Contact.module.scss";
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
 
 export const Contact = ({ isToggled }) => {
   // State
