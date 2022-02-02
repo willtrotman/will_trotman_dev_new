@@ -79,30 +79,31 @@ export const AudioPlayer = ({ isPlaying, setIsPlaying }) => {
     setIsPlaying(true);
   };
 
-  // if audio player hasn't loaded it's duration,
-  // run loadProgressBarValues again before repainting the DOM.
-  // This will loop endlessly untill duration is loaded at which point it goes to the else statement and the code continues
-  const loadProgressBarValues = () => {
-    if (!audioPlayer.current.duration) {
-      window.requestAnimationFrame(loadProgressBarValues);
-    } else {
-      const seconds = Math.floor(audioPlayer.current.duration);
-      if (seconds) {
-        setDuration(seconds);
-        progressBar.current.max = seconds;
-      }
-      whilePlaying();
-    }
-  };
-
   useEffect(() => {
+    // if audio player hasn't loaded it's duration,
+    // run loadProgressBarValues again before repainting the DOM.
+    // This will loop endlessly untill duration is loaded at which point it goes to the else statement and the code continues
+    const loadProgressBarValues = () => {
+      if (!audioPlayer.current.duration) {
+        window.requestAnimationFrame(loadProgressBarValues);
+      } else {
+        const seconds = Math.floor(audioPlayer.current.duration);
+        if (seconds) {
+          setDuration(seconds);
+          progressBar.current.max = seconds;
+        }
+        whilePlaying();
+      }
+    };
     loadProgressBarValues();
     console.log({ audioPlayer });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [audioPlayer?.current?.loadedmetadata, audioPlayer?.current?.readyState]);
 
   useEffect(() => {
     shufflePlaylist();
     setIsPlaying(true);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [setIsPlaying, audioPlayer.src]);
 
   // Return statement

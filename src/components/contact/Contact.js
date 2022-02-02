@@ -34,7 +34,7 @@ export const Contact = ({ isToggled }) => {
         className={isToggled ? classes.contactFormRetro : classes.contactForm}
       >
         {/* First Name */}
-        <label for="first">First Name</label>
+        <label htmlFor="first">First Name</label>
         <input
           value={first}
           onChange={(e) => {
@@ -46,7 +46,7 @@ export const Contact = ({ isToggled }) => {
           placeholder="First Name"
         />
         {/* Last Name */}
-        <label for="last">Last Name</label>
+        <label htmlFor="last">Last Name</label>
         <input
           value={last}
           onChange={(e) => {
@@ -58,7 +58,7 @@ export const Contact = ({ isToggled }) => {
           placeholder="Last Name"
         />
         {/* Subject */}
-        <label for="subject">Subject</label>
+        <label htmlFor="subject">Subject</label>
         <input
           value={subject}
           onChange={(e) => {
@@ -70,7 +70,7 @@ export const Contact = ({ isToggled }) => {
           placeholder="Subject"
         />
         {/* Message */}
-        <label for="message">Your Message</label>
+        <label htmlFor="message">Your Message</label>
         <textarea
           value={body}
           onChange={(e) => {
