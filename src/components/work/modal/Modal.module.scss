@@ -7,7 +7,7 @@
   height: 100vh;
   width: 100%;
   background: rgba(0, 0, 0, 0.5);
-  z-index: 1000;
+  z-index: 2000;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,6 +23,13 @@
   z-index: 1001;
   color: white;
   box-shadow: 0 0 5px 1px $green;
+  @media screen and (max-width: 600px) {
+    height: 100%;
+    width: 100%;
+    z-index: 2001;
+    top: 0;
+    left: 0;
+  }
 }
 
 .exitButton {
@@ -50,12 +57,19 @@
   display: flex;
   // justify-content: center;
   padding: 0 2rem;
+  @media screen and (max-width: 600px) {
+    margin: 0 auto;
+  }
 }
 
 .modalBody {
   padding: 3rem;
   display: flex;
   flex: 1;
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+    margin-top: -2rem;
+  }
 }
 
 .modalBodyLeft {
@@ -64,10 +78,17 @@
   // background: red;
   width: 100%;
   justify-content: flex-start;
+  @media screen and (max-width: 600px) {
+    margin-bottom: 2rem;
+  }
 }
 
 .modalImage {
   width: 85%;
+  @media screen and (max-width: 600px) {
+    margin: 0 auto;
+    width: 95%;
+  }
 }
 
 .modalBodyRight {
@@ -81,6 +102,9 @@
 .modalBodyRight p {
   font-size: 1.3rem;
   margin-bottom: 2rem;
+  @media screen and (max-width: 600px) {
+    font-size: 1rem;
+  }
 }
 
 .link {
@@ -88,6 +112,9 @@
   color: white;
   font-family: "Source Code Pro";
   font-size: 2rem;
+  @media screen and (max-width: 600px) {
+    margin: 0 auto;
+  }
 }
 
 .websiteDescription {

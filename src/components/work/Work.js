@@ -24,7 +24,7 @@ export function Work({ isToggled }) {
           return (
             <div key={index}>
               <div
-                className={classes.panel}
+                className={isToggled ? classes.panelRetro : classes.panel}
                 alt={site.title}
                 onClick={() => {
                   openModal(index);
