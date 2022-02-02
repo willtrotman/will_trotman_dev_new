@@ -8,7 +8,7 @@ export function Nav({ isToggled, setIsToggled }) {
   const [show, setShow] = useState(true);
   const controlNavbar = () => {
     const st = window.pageYOffset;
-    if (st > lastScrollTop) {
+    if (st > lastScrollTop && lastScrollTop !== 0) {
       setShow(false);
     } else setShow(true);
     setLastScrollTop(st);

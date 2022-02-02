@@ -4,7 +4,7 @@ export const websites = [
     description:
       "This is a site I built for Tugo Taco, a student run taco cart in Knoxville, TN. I attempted to keep the aesthetic fun and bright, as to cater to their demographic of primarily students.",
     languages: "Tools Used: HTML, Sass, Javascript",
-    link: "https://fervent-agnesi-f8b877.netlify.app/",
+    link: "https://tugotaco.netlify.app/",
     image: "../images/tugo-taco.png",
     linkText: "View Site",
   },
