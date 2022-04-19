@@ -9,10 +9,14 @@ export function Work({ isToggled }) {
   // Close modal function
   const closeModal = () => {
     setModalOpen(null);
+    document.body.style.overflow = "unset";
   };
   // Open modal function
   const openModal = (index) => {
     setModalOpen(index);
+    if (typeof window != "undefined" && window.document) {
+      document.body.style.overflow = "hidden";
+    }
   };
   return (
     <section id="work">

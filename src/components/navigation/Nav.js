@@ -33,11 +33,14 @@ export function Nav({ isToggled, setIsToggled }) {
             GitHub
           </a>
         </li>
-        {/* <li className={classes.heading} key="LinkedIn">
-          <a href="#" target="blank">
+        <li className={classes.heading} key="LinkedIn">
+          <a
+            href="https://www.linkedin.com/in/will-trotman-41056815b/"
+            target="blank"
+          >
             LinkedIn
           </a>
-        </li> */}
+        </li>
         <li className={classes.heading} key="Contact">
           <a href="mailto: willtrotman336@gmail.com" target="blank">
             Contact
