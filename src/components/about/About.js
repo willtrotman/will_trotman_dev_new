@@ -7,8 +7,9 @@ export function About({ isToggled }) {
         Front End Developer
       </h2>
       <p className={classes.about}>
-        Welcome to my portfolio! I'm a musician who found a passion for coding
-        on his journey to pay rent. I spend most of my time working in React.
+        Welcome to my portfolio! I'm a musician gone web developer, primarily
+        working in React. I enjoy writing clean, reusable code and designing
+        smooth user interfaces.
       </p>
       {/* <div className={classes.email}>willtrotman336@gmail.com</div> */}
     </div>
