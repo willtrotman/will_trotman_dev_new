@@ -9,7 +9,8 @@ export function About({ isToggled }) {
       <p className={classes.about}>
         Welcome to my portfolio! I'm a musician gone web developer, who
         primarily works in React. I enjoy writing clean, reusable code and
-        designing smooth user interfaces.
+        designing smooth user interfaces. Click the switch in the navigation for
+        retro mode. It's better.
       </p>
       {/* <div className={classes.email}>willtrotman336@gmail.com</div> */}
     </div>

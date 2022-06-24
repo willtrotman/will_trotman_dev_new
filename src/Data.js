@@ -1,9 +1,18 @@
 export const websites = [
   {
+    title: "GrindyLocks",
+    description:
+      "Building the entire front end for the startup of GrindyLocks, a social media that helps skaters search for skateparks and share content. I am currently modeling the feed and profile pages after Instagram until a wireframe is made with specific styling.",
+    languages: "Tech Used: React, Typescript, SCSS, Swiper JS",
+    link: "https://6286815d748943036f8ffac6--grindylocks.netlify.app/",
+    image: "../images/GrindyLocks.png",
+    linkText: "View Site",
+  },
+  {
     title: "Tugo Taco",
     description:
       "This is a site I built for Tugo Taco, a student run taco cart in Knoxville, TN. I attempted to keep the aesthetic fun and bright, as to cater to their demographic of primarily students.",
-    languages: "Tools Used: HTML, Sass, Javascript",
+    languages: "Tech Used: HTML, Sass, Javascript",
     link: "https://tugotaco.netlify.app/",
     image: "../images/tugo-taco.png",
     linkText: "View Site",
