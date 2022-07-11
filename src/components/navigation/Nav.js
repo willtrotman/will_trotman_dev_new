@@ -24,7 +24,7 @@ export function Nav({ isToggled, setIsToggled }) {
     <nav className={!show ? classes.hidden : undefined}>
       <ul className={classes.navlist}>
         <li className={classes.heading} key="Resume">
-          <a href="./images/resume.pdf" target="blank">
+          <a href="./images/Resume.pdf" target="blank">
             Resume
           </a>
         </li>
